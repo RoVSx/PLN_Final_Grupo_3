@@ -1,6 +1,3 @@
-# PLN_Final_Grupo_3
-Examen final de PLN
-=======
 # Clasificador de reclamos municipales
 
 La version oficial del proyecto es un clasificador supervisado entrenado con data historica real usando la columna `prestacion` como entrada y `categoria` como etiqueta.
@@ -31,41 +28,15 @@ El modelo usa:
 
 Categorias detectadas en el historico:
 
-- `Limpieza Pública`
-- `Tránsito/Transporte`
+- `Limpieza Publica`
+- `Transito/Transporte`
 - `Otros`
-- `Áreas Verdes`
-- `Alumbrado Público`
+- `Areas Verdes`
+- `Alumbrado Publico`
 - `Seguridad Ciudadana (Serenazgo)`
-- `Ruido/Contaminación sonora`
+- `Ruido/Contaminacion sonora`
 
 ## Instalacion
 
 ```bash
 python -m pip install -r requirements.txt
-```
-
-## Entrenamiento
-
-```bash
-python entrenar_reclamos.py atencion_ciudadana_lima_2023.csv
-```
-
-## Inferencia
-
-```bash
-python clasificar_reclamos.py ejemplo_reclamos.csv salida_clasificada.csv
-```
-
-## Salida
-
-El clasificador conserva todas las columnas originales y agrega:
-
-- `categoria_sugerida`
-- `confianza_modelo`
-- `requiere_revision`
-
-## Baseline
-
-La version anterior por similitud coseno y el baseline legado quedaron movidos a la carpeta `baseline/` para referencia y comparacion, pero no forman parte del flujo principal.
->>>>>>> c8d5a0c (nuevo)

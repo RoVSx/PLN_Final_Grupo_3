@@ -111,7 +111,6 @@ def entrenar_clasificador(
         max_iter=1000,
         class_weight="balanced",
         random_state=random_state,
-        multi_class="auto",
     )
     model.fit(X_train, y_train)
     return model
