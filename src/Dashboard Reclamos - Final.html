@@ -9,74 +9,62 @@
 <link rel="stylesheet" href="Dashboard Reclamos - Final.css">
 </head>
 <body>
-<div style="display:flex;justify-content:center;padding:40px;box-sizing:border-box;min-height:100vh;">
-  <div style="width:1220px;max-width:100%;">
-    <div style="display:flex;background:white;border:1px solid oklch(0.9 0.01 250);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px oklch(0 0 0 / 8%);">
-
-      <div style="width:72px;background:oklch(0.16 0.02 250);display:flex;flex-direction:column;align-items:center;padding:20px 0;gap:22px;flex-shrink:0;">
-        <div style="width:34px;height:34px;border-radius:8px;background:oklch(0.5 0.13 250);"></div>
-        <div style="width:7px;height:7px;border-radius:50%;background:white;"></div>
-        <div style="width:7px;height:7px;border-radius:50%;background:oklch(0.4 0.02 250);"></div>
-        <div style="width:7px;height:7px;border-radius:50%;background:oklch(0.4 0.02 250);"></div>
-      </div>
+<div style="display:flex;justify-content:center;padding:32px;box-sizing:border-box;min-height:100vh;">
+  <div style="width:100%;max-width:1760px;">
+    <div style="display:flex;background:white;border:1px solid oklch(0.9 0.01 269);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px oklch(0 0 0 / 8%);">
 
       <div style="flex:1;display:flex;flex-direction:column;min-width:0;">
-        <div style="padding:22px 28px;border-bottom:1px solid oklch(0.92 0.01 250);display:flex;flex-direction:column;gap:14px;">
+        <div style="padding:22px 28px;border-bottom:1px solid oklch(0.92 0.01 269);display:flex;flex-direction:column;gap:14px;">
           <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;">
             <div>
-              <div style="font-size:20px;font-weight:700;color:oklch(0.2 0.02 250);">Reclamos por redes sociales</div>
-              <div style="font-size:13px;color:oklch(0.5 0.02 250);margin-top:2px;">Clasificación automática por categoría (NLP)</div>
+              <div style="font-size:20px;font-weight:700;color:oklch(0.2 0.02 269);">Reclamos ciudadanos — Lima 2023</div>
+              <div style="font-size:13px;color:oklch(0.5 0.02 269);margin-top:2px;">Clasificación automática por categoría (NLP)</div>
             </div>
             <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
-              <input id="dateStart" type="date" style="padding:8px 10px;border-radius:8px;border:1px solid oklch(0.85 0.01 250);font-size:13px;color:oklch(0.3 0.02 250);">
-              <span style="font-size:13px;color:oklch(0.55 0.02 250);">a</span>
-              <input id="dateEnd" type="date" style="padding:8px 10px;border-radius:8px;border:1px solid oklch(0.85 0.01 250);font-size:13px;color:oklch(0.3 0.02 250);">
+              <input id="dateStart" type="date" style="padding:8px 10px;border-radius:8px;border:1px solid oklch(0.85 0.01 269);font-size:13px;color:oklch(0.3 0.02 269);">
+              <span style="font-size:13px;color:oklch(0.55 0.02 269);">a</span>
+              <input id="dateEnd" type="date" style="padding:8px 10px;border-radius:8px;border:1px solid oklch(0.85 0.01 269);font-size:13px;color:oklch(0.3 0.02 269);">
             </div>
           </div>
           <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center;">
             <div id="catChips" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
-            <select id="zonaSelect" style="padding:7px 12px;border-radius:8px;border:1px solid oklch(0.85 0.01 250);font-size:13px;color:oklch(0.3 0.02 250);margin-left:auto;">
-              <option value="Todas">Todas las zonas</option>
-              <option value="Centro">Centro</option>
-              <option value="Norte">Norte</option>
-              <option value="Sur">Sur</option>
-              <option value="Este">Este</option>
-              <option value="Oeste">Oeste</option>
+            <select id="distritoSelect" style="padding:7px 12px;border-radius:8px;border:1px solid oklch(0.85 0.01 269);font-size:13px;color:oklch(0.3 0.02 269);margin-left:auto;">
+              <option value="Todos">Todos los distritos</option>
             </select>
           </div>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:24px 28px 0;">
           <div class="stat-card">
-            <div class="stat-label" style="color:oklch(0.5 0.02 250);">TOTAL RECLAMOS</div>
+            <div class="stat-label" style="color:oklch(0.5 0.02 269);">TOTAL RECLAMOS</div>
             <div id="statTotal" class="stat-value">0</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-label" style="color:oklch(0.42 0.13 250);">CATEGORÍA TOP</div>
+          <div class="stat-card top">
+            <div class="stat-label" style="color:oklch(0.32 0.13 269);">CATEGORÍA TOP</div>
             <div id="statTopCatName" class="stat-value-sm">—</div>
             <div id="statTopCatCount" class="stat-sub">0 reclamos</div>
           </div>
-          <div class="stat-card">
-            <div class="stat-label" style="color:oklch(0.42 0.13 250);">ZONA TOP</div>
-            <div id="statTopZonaName" class="stat-value-sm">—</div>
-            <div id="statTopZonaCount" class="stat-sub">0 reclamos</div>
+          <div class="stat-card top">
+            <div class="stat-label" style="color:oklch(0.32 0.13 269);">DISTRITO TOP</div>
+            <div id="statTopDistritoName" class="stat-value-sm">—</div>
+            <div id="statTopDistritoCount" class="stat-sub">0 reclamos</div>
           </div>
         </div>
 
         <div style="display:grid;grid-template-columns:280px 1fr;gap:20px;padding:24px 28px;">
           <div class="panel-card">
             <div class="panel-title">Distribución por categoría</div>
-            <div id="donut" style="width:150px;height:150px;border-radius:50%;margin:0 auto 16px;background:oklch(0.92 0.01 250);"></div>
+            <div id="donut" style="width:150px;height:150px;border-radius:50%;margin:0 auto 16px;background:oklch(0.92 0.01 269);"></div>
             <div id="catLegend" style="display:flex;flex-direction:column;gap:6px;"></div>
           </div>
           <div class="panel-card">
-            <div class="panel-title">Reclamos por red social</div>
-            <div id="redBars" style="display:flex;flex-direction:column;gap:14px;"></div>
+            <div class="panel-title">Reclamos por estado de atención</div>
+            <div id="estadoBars" style="display:flex;flex-direction:column;gap:14px;"></div>
           </div>
         </div>
 
         <div style="padding:0 28px 28px;">
-          <div style="font-size:13px;font-weight:700;color:oklch(0.3 0.02 250);margin-bottom:10px;">Detalle por categoría</div>
+          <div style="font-size:13px;font-weight:700;color:oklch(0.3 0.02 269);margin-bottom:10px;">Detalle por categoría</div>
           <div class="table-wrap">
             <div class="table-head">
               <div>CATEGORÍA</div><div>CONTEO</div><div>% DEL TOTAL</div><div>DISTRIBUCIÓN</div>
@@ -89,11 +77,11 @@
       <div id="sidePanel">
         <div class="side-inner">
           <div style="display:flex;align-items:center;justify-content:space-between;">
-            <div id="activeCatLabel" style="font-size:15px;font-weight:700;color:oklch(0.2 0.02 250);"></div>
+            <div id="activeCatLabel" style="font-size:15px;font-weight:700;color:oklch(0.2 0.02 269);"></div>
             <button id="clearCatBtn" class="clear-btn">×</button>
           </div>
           <input id="searchInput" class="search-input" type="text" placeholder="Buscar en comentarios…">
-          <div id="commentsInfo" style="font-size:12px;color:oklch(0.5 0.02 250);"></div>
+          <div id="commentsInfo" style="font-size:12px;color:oklch(0.5 0.02 269);"></div>
           <div style="display:flex;flex-direction:column;gap:10px;overflow-y:auto;">
             <div id="commentsList" style="display:flex;flex-direction:column;gap:10px;"></div>
             <div id="commentsEmpty" class="comments-empty" style="display:none;">Sin comentarios para esta categoría con los filtros actuales.</div>
@@ -105,111 +93,34 @@
   </div>
 </div>
 
+<script src="mockData.js"></script>
 <script>
-const CATEGORIES = ['Limpieza pública','Alumbrado público','Tránsito','Áreas verdes','Ruido','Seguridad','Otros'];
-const CAT_WEIGHTS = [22,16,18,10,12,14,8];
-const CAT_COLORS = ['oklch(0.34 0.10 250)','oklch(0.40 0.11 250)','oklch(0.47 0.11 250)','oklch(0.54 0.10 250)','oklch(0.62 0.09 250)','oklch(0.70 0.07 250)','oklch(0.78 0.02 250)'];
-const REDES = ['Twitter/X','Facebook','Instagram','WhatsApp'];
-const RED_WEIGHTS = [35,30,20,15];
-const ZONAS = ['Centro','Norte','Sur','Este','Oeste'];
+const CATEGORIES = ['Limpieza Pública','Tránsito/Transporte','Otros','Áreas Verdes','Alumbrado Público','Seguridad Ciudadana (Serenazgo)','Ruido/Contaminación sonora'];
+const CAT_COLORS = ['oklch(0.34 0.10 269)','oklch(0.40 0.11 263)','oklch(0.47 0.11 257)','oklch(0.54 0.10 251)','oklch(0.62 0.09 245)','oklch(0.70 0.07 238)','oklch(0.78 0.02 232)'];
+const ESTADOS = ['Cerrado','En proceso','Ingresado','Derivado'];
 
-const COMMENT_TEMPLATES = {
-  'Limpieza pública': [
-    'Hace 3 días que no pasa el camión recolector, la vereda está llena de bolsas de basura.',
-    'Los contenedores de la esquina están desbordados y hay malos olores todo el día.',
-    'Falta barrido en la avenida principal, se acumula tierra y papeles.',
-    'Piden que aumenten la frecuencia de recojo de residuos en la zona, no se da abasto.',
-    'Vecinos reportan basura acumulada frente al parque desde el fin de semana.'
-  ],
-  'Alumbrado público': [
-    'Hay tres postes apagados en mi cuadra desde hace una semana, es peligroso de noche.',
-    'La farola de la esquina parpadea constantemente, ya reportamos antes sin respuesta.',
-    'Cables sueltos colgando de un poste cerca del colegio, riesgo para los niños.',
-    'Todo el pasaje está a oscuras, no se ve nada al caminar de noche.',
-    'Piden revisión urgente del alumbrado del parque, hay zonas totalmente oscuras.'
-  ],
-  'Tránsito': [
-    'El semáforo de la avenida lleva días malogrado y se forma un caos vehicular.',
-    'Autos mal estacionados bloquean el paso peatonal frente al mercado.',
-    'Congestión diaria en la intersección por falta de señalización clara.',
-    'Piden un reductor de velocidad, los autos pasan muy rápido cerca del colegio.',
-    'Falta un semáforo peatonal en el cruce, ya hubo casi accidentes.'
-  ],
-  'Áreas verdes': [
-    'El parque del barrio está descuidado, el pasto sin cortar hace semanas.',
-    'Un árbol caído bloquea la vereda desde la última lluvia, nadie lo retira.',
-    'Piden más riego para las áreas verdes de la avenida, se están secando.',
-    'Los juegos infantiles del parque están rotos y oxidados, es peligroso.',
-    'Falta mantenimiento en las jardineras de la plaza principal.'
-  ],
-  'Ruido': [
-    'Fiestas con música muy fuerte hasta la madrugada en el local de la esquina.',
-    'Obras de construcción empiezan muy temprano y no respetan el horario permitido.',
-    'Bocinas y alarmas de autos durante toda la noche, no dejan dormir.',
-    'Vecinos piden fiscalización de un bar que excede el límite de ruido permitido.',
-    'Reclaman por ruido constante de una fábrica cercana a zona residencial.'
-  ],
-  'Seguridad': [
-    'Piden más rondas de serenazgo, ha habido varios robos esta semana en la zona.',
-    'Las cámaras de seguridad del parque llevan meses malogradas.',
-    'Falta iluminación y vigilancia en el pasaje, sienten inseguridad al volver de noche.',
-    'Reportan venta ambulante que genera desorden y percepción de inseguridad.',
-    'Piden un puesto de serenazgo fijo cerca del mercado, hay muchos incidentes.'
-  ],
-  'Otros': [
-    'La atención en la oficina de trámites es muy lenta, piden más ventanillas.',
-    'No encuentran información clara sobre el procedimiento para un permiso municipal.',
-    'Piden más difusión de las campañas municipales en el barrio.',
-    'Reclaman demora en la respuesta a un trámite iniciado hace un mes.',
-    'Sugieren habilitar un canal digital para hacer seguimiento a los reclamos.'
-  ]
-};
-
-function mulberry32(seed){
-  return function(){
-    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
-    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
-    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-    return ((t ^ t >>> 14) >>> 0) / 4294967296;
-  };
+function formatDate(str){
+  const d = new Date(str + 'T00:00:00');
+  return d.toLocaleDateString('es-PE', {day:'2-digit', month:'short', year:'numeric'});
 }
-function weightedPick(rng, items, weights){
-  const total = weights.reduce((a,b)=>a+b,0);
-  let r = rng()*total;
-  for(let i=0;i<items.length;i++){ if(r<weights[i]) return items[i]; r-=weights[i]; }
-  return items[items.length-1];
-}
-function generateData(){
-  const rng = mulberry32(42);
-  const now = new Date(2026,6,16);
-  const arr = [];
-  const RECORD_COUNT = 82; // +2 registros de prueba respecto al mock original
-  for(let i=0;i<RECORD_COUNT;i++){
-    const cat = weightedPick(rng, CATEGORIES, CAT_WEIGHTS);
-    const red = weightedPick(rng, REDES, RED_WEIGHTS);
-    const zona = ZONAS[Math.floor(rng()*ZONAS.length)];
-    const daysAgo = Math.floor(rng()*35);
-    const dateObj = new Date(now); dateObj.setDate(dateObj.getDate()-daysAgo);
-    const texts = COMMENT_TEMPLATES[cat];
-    const texto = texts[Math.floor(rng()*texts.length)];
-    arr.push({id:'r'+i, cat, red, zona, dateObj, texto});
-  }
-  arr.sort((a,b)=>b.dateObj-a.dateObj);
-  return arr;
-}
-function formatDate(d){ return d.toLocaleDateString('es-PE', {day:'2-digit', month:'short'}); }
 function escapeHtml(str){
   return String(str)
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
     .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
+function loadData(){
+  return RECLAMOS_DATA.map(d => ({ ...d, dateObj: new Date(d.fecha + 'T00:00:00') }));
+}
+
+const DISTRITOS = [...new Set(RECLAMOS_DATA.map(d => d.distrito))].sort((a,b)=>a.localeCompare(b,'es'));
+
 const state = {
-  data: generateData(),
-  dateStart: '2026-06-16',
-  dateEnd: '2026-07-16',
+  data: loadData(),
+  dateStart: '2023-01-01',
+  dateEnd: '2023-12-31',
   cats: [],
-  zona: 'Todas',
+  distrito: 'Todos',
   activeCat: null,
   search: ''
 };
@@ -219,12 +130,12 @@ function getFiltered(){
   const end = new Date(state.dateEnd + 'T23:59:59');
   return state.data.filter(d =>
     d.dateObj >= start && d.dateObj <= end &&
-    (state.cats.length===0 || state.cats.includes(d.cat)) &&
-    (state.zona==='Todas' || state.zona===d.zona)
+    (state.cats.length===0 || state.cats.includes(d.categoria)) &&
+    (state.distrito==='Todos' || state.distrito===d.distrito)
   );
 }
 function countByCat(list){
-  const counts = CATEGORIES.map((cat,i)=>({name:cat, count:list.filter(d=>d.cat===cat).length, color:CAT_COLORS[i]}));
+  const counts = CATEGORIES.map((cat,i)=>({name:cat, count:list.filter(d=>d.categoria===cat).length, color:CAT_COLORS[i]}));
   const max = Math.max(1, ...counts.map(c=>c.count));
   const total = list.length || 1;
   return counts.map(c => ({
@@ -271,11 +182,11 @@ function render(){
     btn.addEventListener('click', () => toggleChip(btn.dataset.cat));
   });
 
-  // Zona top / donut / legend
-  const zonaCounts = ZONAS.map(z=>({name:z, count:filtered.filter(d=>d.zona===z).length}));
-  const topZona = zonaCounts.reduce((a,b)=>b.count>a.count?b:a, zonaCounts[0] || {name:'—', count:0});
-  document.getElementById('statTopZonaName').textContent = topZona.name;
-  document.getElementById('statTopZonaCount').textContent = topZona.count + ' reclamos';
+  // Distrito top / donut / legend
+  const distritoCounts = DISTRITOS.map(z=>({name:z, count:filtered.filter(d=>d.distrito===z).length}));
+  const topDistrito = distritoCounts.reduce((a,b)=>b.count>a.count?b:a, distritoCounts[0] || {name:'—', count:0});
+  document.getElementById('statTopDistritoName').textContent = topDistrito.name;
+  document.getElementById('statTopDistritoCount').textContent = topDistrito.count + ' reclamos';
 
   let acc = 0;
   const withCount = catBars.filter(c=>c.count>0);
@@ -284,7 +195,7 @@ function render(){
     const start = acc; acc += pct;
     return `${c.color} ${start}% ${acc}%`;
   }).join(', ');
-  document.getElementById('donut').style.background = total ? `conic-gradient(${stops})` : 'oklch(0.92 0.01 250)';
+  document.getElementById('donut').style.background = total ? `conic-gradient(${stops})` : 'oklch(0.92 0.01 269)';
 
   document.getElementById('catLegend').innerHTML = catBars.map(c => `
     <div class="legend-row">
@@ -294,15 +205,15 @@ function render(){
     </div>
   `).join('');
 
-  // Red bars
-  const redCounts = REDES.map(r=>({name:r, count:filtered.filter(d=>d.red===r).length}));
-  const maxRed = Math.max(1, ...redCounts.map(r=>r.count));
-  document.getElementById('redBars').innerHTML = redCounts.map(r => {
-    const width = r.count===0 ? 4 : Math.max(4, Math.round(r.count/maxRed*100));
+  // Estado bars
+  const estadoCounts = ESTADOS.map(e=>({name:e, count:filtered.filter(d=>d.estado===e).length}));
+  const maxEstado = Math.max(1, ...estadoCounts.map(e=>e.count));
+  document.getElementById('estadoBars').innerHTML = estadoCounts.map(e => {
+    const width = e.count===0 ? 4 : Math.max(4, Math.round(e.count/maxEstado*100));
     return `
       <div>
-        <div class="red-row-label"><span>${escapeHtml(r.name)}</span><span style="font-weight:600;">${r.count}</span></div>
-        <div class="red-track"><div class="red-fill" style="width:${width}%;"></div></div>
+        <div class="bar-row-label"><span>${escapeHtml(e.name)}</span><span style="font-weight:600;">${e.count}</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:${width}%;"></div></div>
       </div>
     `;
   }).join('');
@@ -328,7 +239,7 @@ function render(){
   document.getElementById('activeCatLabel').textContent = activeCat || '';
 
   const search = (state.search || '').toLowerCase();
-  const catMatches = activeCat ? filtered.filter(d=>d.cat===activeCat) : [];
+  const catMatches = activeCat ? filtered.filter(d=>d.categoria===activeCat) : [];
   const searchMatches = search ? catMatches.filter(d=>d.texto.toLowerCase().includes(search)) : catMatches;
   const commentsTotal = searchMatches.length;
   const comments = searchMatches.slice(0,25);
@@ -337,8 +248,8 @@ function render(){
   document.getElementById('commentsList').innerHTML = comments.map(c => `
     <div class="comment-card">
       <div class="comment-meta">
-        <span class="comment-red">${escapeHtml(c.red)}</span>
-        <span class="comment-sub">· ${escapeHtml(c.zona)} · ${formatDate(c.dateObj)}</span>
+        <span class="comment-tag">${escapeHtml(c.estado)}</span>
+        <span class="comment-sub">· ${escapeHtml(c.distrito)} · ${formatDate(c.fecha)}</span>
       </div>
       <div class="comment-text">${escapeHtml(c.texto)}</div>
     </div>
@@ -348,11 +259,18 @@ function render(){
 
 document.getElementById('dateStart').value = state.dateStart;
 document.getElementById('dateEnd').value = state.dateEnd;
-document.getElementById('zonaSelect').value = state.zona;
+
+const distritoSelectEl = document.getElementById('distritoSelect');
+DISTRITOS.forEach(d => {
+  const opt = document.createElement('option');
+  opt.value = d; opt.textContent = d;
+  distritoSelectEl.appendChild(opt);
+});
+distritoSelectEl.value = state.distrito;
 
 document.getElementById('dateStart').addEventListener('change', e => { state.dateStart = e.target.value; render(); });
 document.getElementById('dateEnd').addEventListener('change', e => { state.dateEnd = e.target.value; render(); });
-document.getElementById('zonaSelect').addEventListener('change', e => { state.zona = e.target.value; render(); });
+distritoSelectEl.addEventListener('change', e => { state.distrito = e.target.value; render(); });
 document.getElementById('searchInput').addEventListener('input', e => { state.search = e.target.value; render(); });
 document.getElementById('clearCatBtn').addEventListener('click', clearCat);
 
