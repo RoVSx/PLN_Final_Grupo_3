@@ -1,55 +1,71 @@
 # PLN_Final_Grupo_3
 Examen final de PLN
 =======
-# Clasificador de reclamos municipales con embeddings
+# Clasificador de reclamos municipales
 
-Este proyecto contiene un modulo en Python para clasificar reclamos municipales a partir de la columna `prestacion` usando:
+La version oficial del proyecto es un clasificador supervisado entrenado con data historica real usando la columna `prestacion` como entrada y `categoria` como etiqueta.
 
-- `sentence-transformers`
-- el modelo `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
-- similitud coseno entre cada reclamo y descripciones semanticas de categorias
+## Flujo principal
+
+1. Entrenar el modelo con el historico municipal.
+2. Guardar el modelo entrenado en `artifacts/supervised_model.joblib`.
+3. Clasificar nuevos reclamos con ese modelo.
 
 ## Archivos principales
 
-- `clasificador_reclamos.py`: modulo principal y CLI
+- `entrenar_reclamos.py`: entrena el modelo supervisado
+- `clasificar_reclamos.py`: clasifica nuevos CSV con el modelo entrenado
+- `src/supervised_classifier.py`: logica compartida de entrenamiento e inferencia
 - `requirements.txt`: dependencias necesarias
-- `ejemplo_reclamos.csv`: archivo de entrada de ejemplo con 12 reclamos
+- `atencion_ciudadana_lima_2023.csv`: dataset historico de entrenamiento
+- `ejemplo_reclamos.csv`: archivo de ejemplo para probar inferencia
 
-## Categorias sugeridas
+## Modelo oficial
 
-- `Limpieza publica`
-- `Alumbrado publico`
-- `Transito`
-- `Areas verdes`
-- `Ruido`
-- `Seguridad`
+El modelo usa:
+
+- `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
+- embeddings normalizados para cada `prestacion`
+- `LogisticRegression` de `scikit-learn`
+- categorias reales de la columna `categoria`
+
+Categorias detectadas en el historico:
+
+- `Limpieza Pública`
+- `Tránsito/Transporte`
 - `Otros`
-
-Si la mejor similitud es menor al umbral configurado, el script asigna `Otros / Revision manual`.
+- `Áreas Verdes`
+- `Alumbrado Público`
+- `Seguridad Ciudadana (Serenazgo)`
+- `Ruido/Contaminación sonora`
 
 ## Instalacion
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-## Uso
+## Entrenamiento
 
 ```bash
-python clasificador_reclamos.py ejemplo_reclamos.csv salida_clasificada.csv
+python entrenar_reclamos.py atencion_ciudadana_lima_2023.csv
 ```
 
-Tambien puedes ajustar el umbral:
+## Inferencia
 
 ```bash
-python clasificador_reclamos.py ejemplo_reclamos.csv salida_clasificada.csv --threshold 0.45
+python clasificar_reclamos.py ejemplo_reclamos.csv salida_clasificada.csv
 ```
 
 ## Salida
 
-El script conserva todas las columnas originales y agrega:
+El clasificador conserva todas las columnas originales y agrega:
 
 - `categoria_sugerida`
-- `similitud_maxima`
+- `confianza_modelo`
 - `requiere_revision`
+
+## Baseline
+
+La version anterior por similitud coseno y el baseline legado quedaron movidos a la carpeta `baseline/` para referencia y comparacion, pero no forman parte del flujo principal.
 >>>>>>> c8d5a0c (nuevo)

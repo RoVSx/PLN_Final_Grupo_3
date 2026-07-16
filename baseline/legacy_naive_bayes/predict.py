@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 
-from src.classifier import TextComplaintClassifier
+from baseline.legacy_naive_bayes.classifier import TextComplaintClassifier
 
 
 def main() -> None:

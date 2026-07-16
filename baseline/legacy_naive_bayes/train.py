@@ -2,11 +2,11 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from src.classifier import TextComplaintClassifier
-from src.data_utils import load_jsonl, train_test_split
+from baseline.legacy_naive_bayes.classifier import TextComplaintClassifier
+from baseline.legacy_naive_bayes.data_utils import load_jsonl, train_test_split
 
 
-DATA_PATH = Path("data/train_data.jsonl")
+DATA_PATH = Path("baseline/legacy_naive_bayes/train_data.jsonl")
 MODEL_PATH = Path("artifacts/model.json")
 
 
