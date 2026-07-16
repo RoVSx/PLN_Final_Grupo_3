@@ -1,4 +1,5 @@
 __pycache__/
 *.py[cod]
-artifacts/
+artifacts/*
+!artifacts/supervised_model.joblib
 salida_clasificada.csv
