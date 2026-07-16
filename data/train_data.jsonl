@@ -1,0 +1,56 @@
+{"text": "No recogen la basura desde hace tres dias en mi calle y hay bolsas acumuladas", "label": "limpieza_publica"}
+{"text": "El camion de basura no paso por la avenida principal esta semana", "label": "limpieza_publica"}
+{"text": "Hay desmonte y residuos tirados en la esquina del parque", "label": "limpieza_publica"}
+{"text": "Necesitamos limpiar el mercado porque hay malos olores y desperdicios", "label": "limpieza_publica"}
+{"text": "Los contenedores de basura estan llenos y nadie los vacia", "label": "limpieza_publica"}
+{"text": "Hay basura acumulada frente al colegio desde ayer", "label": "limpieza_publica"}
+{"text": "La calle amanecio sucia despues de la feria y nadie ha barrido", "label": "limpieza_publica"}
+{"text": "Solicito retiro de escombros que dejaron en la vereda", "label": "limpieza_publica"}
+{"text": "Una luminaria esta apagada desde hace una semana en el jiron San Martin", "label": "alumbrado"}
+{"text": "El poste de luz del parque no enciende por las noches", "label": "alumbrado"}
+{"text": "Falta iluminacion en la cuadra 5 y es peligroso caminar", "label": "alumbrado"}
+{"text": "Varias farolas del boulevard estan malogradas", "label": "alumbrado"}
+{"text": "La lampara publica parpadea y luego se apaga", "label": "alumbrado"}
+{"text": "No funciona el alumbrado publico cerca al puente", "label": "alumbrado"}
+{"text": "Solicito reparacion del poste con luz averiada", "label": "alumbrado"}
+{"text": "La calle esta completamente oscura por falta de iluminacion", "label": "alumbrado"}
+{"text": "Hay un semaforo malogrado que genera congestion en la avenida", "label": "transito"}
+{"text": "Los autos se estacionan en zona prohibida y bloquean el paso", "label": "transito"}
+{"text": "Se necesita un rompemuelles porque los carros pasan muy rapido", "label": "transito"}
+{"text": "El trafico en la interseccion es caotico por falta de control", "label": "transito"}
+{"text": "Solicito mejor senalizacion vial en el cruce escolar", "label": "transito"}
+{"text": "Hay congestion vehicular por un semaforo fuera de servicio", "label": "transito"}
+{"text": "Una combi invadio la ciclovia y pone en riesgo a los vecinos", "label": "transito"}
+{"text": "Los inspectores deben revisar el desorden vehicular en la plaza", "label": "transito"}
+{"text": "El parque necesita poda porque los arboles estan muy crecidos", "label": "areas_verdes"}
+{"text": "El grass del ovalo esta seco y sin mantenimiento", "label": "areas_verdes"}
+{"text": "Hay ramas caidas y arbustos sin recortar en la berma central", "label": "areas_verdes"}
+{"text": "Solicito riego para las areas verdes del vecindario", "label": "areas_verdes"}
+{"text": "Las plantas del parque estan abandonadas", "label": "areas_verdes"}
+{"text": "Falta mantenimiento de jardines y poda de arboles", "label": "areas_verdes"}
+{"text": "Una palmera inclinada puede caer sobre la vereda", "label": "areas_verdes"}
+{"text": "El area verde frente al condominio esta descuidada", "label": "areas_verdes"}
+{"text": "Hay musica alta todas las noches en un local cercano", "label": "ruido"}
+{"text": "Los vecinos hacen fiestas con parlantes a alto volumen hasta la madrugada", "label": "ruido"}
+{"text": "Se escucha ruido excesivo por obras de construccion muy temprano", "label": "ruido"}
+{"text": "Un bar genera bulla constante y no deja descansar", "label": "ruido"}
+{"text": "Solicito fiscalizacion por ruidos molestos en la cuadra", "label": "ruido"}
+{"text": "Las bocinas de los buses hacen demasiado ruido frente al hospital", "label": "ruido"}
+{"text": "Hay vibraciones y sonido fuerte por maquinaria en la noche", "label": "ruido"}
+{"text": "No se puede dormir por la musica y la bulla del evento", "label": "ruido"}
+{"text": "Hay robos frecuentes en el barrio y falta patrullaje", "label": "seguridad"}
+{"text": "Solicitamos mayor presencia de serenazgo en el parque", "label": "seguridad"}
+{"text": "Personas sospechosas merodean el colegio por las noches", "label": "seguridad"}
+{"text": "Se reporta una pelea en la via publica y se requiere apoyo", "label": "seguridad"}
+{"text": "Falta seguridad ciudadana en la zona comercial", "label": "seguridad"}
+{"text": "Hay consumo de alcohol en la plaza y genera inseguridad", "label": "seguridad"}
+{"text": "Necesitamos camaras o vigilancia cerca del paradero", "label": "seguridad"}
+{"text": "Un grupo de personas amenaza a los transeuntes en la esquina", "label": "seguridad"}
+{"text": "Quiero consultar el horario de atencion de la municipalidad", "label": "otros"}
+{"text": "Solicito informacion sobre requisitos para una licencia", "label": "otros"}
+{"text": "Necesito ayuda con un tramite administrativo", "label": "otros"}
+{"text": "No encuentro donde pagar mis arbitrios", "label": "otros"}
+{"text": "Tengo una duda sobre un documento municipal", "label": "otros"}
+{"text": "Quisiera saber cuando atienden en mesa de partes", "label": "otros"}
+{"text": "Necesito orientacion para registrar una solicitud", "label": "otros"}
+{"text": "Deseo hacer una consulta general sobre servicios municipales", "label": "otros"}

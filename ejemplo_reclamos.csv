@@ -1,0 +1,13 @@
+nro_solicitud,periodo,categoria,prestacion,tipo,fecha_ingreso,hora_ingreso,distrito,urbanizacion,via,numero,referencia,canal,latitud,longitud,genero,estado
+1001,2026-07,Reclamo,"Hay basura acumulada en la esquina desde hace dos dias y nadie recoge los residuos",Ciudadano,2026-07-01,08:15,Lima,Centro,Calle Los Pinos,120,Frente al mercado,Web,-12.0464,-77.0428,F,Registrado
+1002,2026-07,Reclamo,"La luminaria del parque esta apagada y toda la cuadra queda oscura por las noches",Ciudadano,2026-07-01,09:05,Lima,San Juan,Avenida Las Flores,455,Cerca al colegio,App,-12.0471,-77.0402,M,Registrado
+1003,2026-07,Reclamo,"El semaforo de la avenida principal no funciona y genera congestion vehicular",Ciudadano,2026-07-01,10:10,Lima,Miraflores,Avenida Principal,780,Cruce con Bolivia,Telefono,-12.1211,-77.0297,F,Registrado
+1004,2026-07,Reclamo,"Un arbol grande necesita poda urgente porque las ramas invaden la pista",Ciudadano,2026-07-01,10:50,Lima,Surco,Jiron Los Cedros,33,Al costado del parque,Web,-12.1387,-76.9912,M,Registrado
+1005,2026-07,Reclamo,"Hay musica demasiado alta en un local y no deja dormir a los vecinos",Ciudadano,2026-07-01,11:20,Lima,Barranco,Calle Union,210,Frente a la bodega,App,-12.1475,-77.0201,F,Registrado
+1006,2026-07,Reclamo,"Solicitamos mayor presencia de serenazgo porque hay robos y personas sospechosas",Ciudadano,2026-07-01,12:05,Lima,Comas,Avenida Tupac Amaru,950,Cerca al paradero,Web,-11.9329,-77.0535,M,Registrado
+1007,2026-07,Reclamo,"Los contenedores estan llenos y hay malos olores por la basura acumulada",Ciudadano,2026-07-01,12:40,Lima,La Victoria,Jiron Italia,510,Frente a la galeria,Telefono,-12.0652,-77.0304,F,Registrado
+1008,2026-07,Reclamo,"Varias lamparas del boulevard parpadean y una no enciende",Ciudadano,2026-07-01,13:00,Lima,San Isidro,Avenida Camino Real,620,Cerca al banco,App,-12.0983,-77.0369,M,Registrado
+1009,2026-07,Reclamo,"Autos mal estacionados bloquean el paso y falta mejor senalizacion vial",Ciudadano,2026-07-01,13:25,Lima,Pueblo Libre,Calle Sucre,88,Esquina con Brasil,Web,-12.0748,-77.0642,F,Registrado
+1010,2026-07,Reclamo,"El grass del parque esta seco y los arbustos necesitan mantenimiento",Ciudadano,2026-07-01,14:00,Lima,Jesus Maria,Avenida Salaverry,300,Frente al hospital,Telefono,-12.0796,-77.0517,M,Registrado
+1011,2026-07,Reclamo,"Se escucha bulla y vibraciones por una obra que trabaja de madrugada",Ciudadano,2026-07-01,14:45,Lima,Rimac,Jiron Trujillo,142,Cerca a la plaza,Web,-12.0347,-77.0282,F,Registrado
+1012,2026-07,Reclamo,"Hay una situacion rara en la zona y quisiera que lo revisen",Ciudadano,2026-07-01,15:30,Lima,Los Olivos,Calle Las Palmeras,75,Referencia poco clara,App,-11.9919,-77.0708,M,Registrado
